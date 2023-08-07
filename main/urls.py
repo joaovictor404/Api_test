@@ -21,6 +21,6 @@ from api.views import ibge_data_view
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/ibge/', ibge_data_view, name='ibge_data_view'),
-    path('api/', include('api.urls')),
+    path('', include('api.urls')),
 ]
 
