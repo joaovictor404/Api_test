@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Mostrando API no Template Django</title>
+    <style>
+        /* Estilos para o corpo do documento */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        /* Estilos para o elemento com id "dados-api" */
+        #dados-api {
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* Estilos para parágrafos dentro do elemento com id "dados-api" */
+        #dados-api p {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dados da API:</h1>
+    <div id="dados-api">
+        {% for item in dados_api %}
+            <p>{{ item.variavel }}: {{ item.id }}</p>
+            <p>{{ item.unidade }}</p>
+            <p>{{ item.resultados }}</p>
+        {% endfor %}
+    </div>
+</body>
+</html>
